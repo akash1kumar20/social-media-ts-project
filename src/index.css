@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  .commonStyle {
+    @apply text-white w-full md:px-10 px-4 py-2 text-lg flex items-center justify-center gap-x-2 border-b-2 drop-shadow-xl shadow-xl font-semibold;
+  }
+}
