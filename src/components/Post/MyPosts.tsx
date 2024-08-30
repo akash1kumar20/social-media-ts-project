@@ -1,5 +1,7 @@
+import HomeComponents from "../../Design/HomeComponents";
+
 const MyPosts = () => {
-  return <div></div>;
+  return <HomeComponents>Hi</HomeComponents>;
 };
 
 export default MyPosts;

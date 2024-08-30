@@ -84,7 +84,9 @@ const Login_SignIn = () => {
             message: message,
           })
         );
-        navigate("/home");
+        setTimeout(() => {
+          navigate("/home/posts");
+        }, 1500);
       }
     } catch (err) {
       dispatch(

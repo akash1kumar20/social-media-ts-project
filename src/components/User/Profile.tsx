@@ -1,5 +1,7 @@
+import HomeComponents from "../../Design/HomeComponents";
+
 const Profile = () => {
-  return <div></div>;
+  return <HomeComponents>hi </HomeComponents>;
 };
 
 export default Profile;
