@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import LoadingComponent from "./Design/LoadingComponent.tsx";
 import { Provider } from "react-redux";
 import store from "./store/index.ts";
+
 const App = lazy(() => import("./App.tsx"));
 const Home = lazy(() => import("./components/Home/Home.tsx"));
 const Create_Post = lazy(() => import("./components/Post/Create_Post.tsx"));
@@ -12,6 +13,7 @@ const MyPosts = lazy(() => import("./components/Post/MyPosts.tsx"));
 const Profile = lazy(() => import("./components/User/Profile.tsx"));
 const Posts = lazy(() => import("./components/Post/Posts.tsx"));
 const WrongUrl = lazy(() => import("./components/WrongUrl/WrongUrl.tsx"));
+const Setting = lazy(() => import("./components/Settings/Setting.tsx"));
 
 const routes = createBrowserRouter([
   {
@@ -59,6 +61,14 @@ const routes = createBrowserRouter([
         element: (
           <Suspense fallback={<LoadingComponent />}>
             <Profile />
+          </Suspense>
+        ),
+      },
+      {
+        path: "/home/setting",
+        element: (
+          <Suspense fallback={<LoadingComponent />}>
+            <Setting />
           </Suspense>
         ),
       },

@@ -1,12 +1,14 @@
 import { configureStore } from "@reduxjs/toolkit";
 import PopupSlice from "./popupSlice";
 import AuthenticationSlice from "./authenticationSlice";
+import ThemeSlice from "./themeSlice";
 import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
 
 const store = configureStore({
   reducer: {
     popup: PopupSlice.reducer,
     authentication: AuthenticationSlice.reducer,
+    theme: ThemeSlice.reducer,
   },
 });
 export const useAppDispatch: () => typeof store.dispatch = useDispatch;

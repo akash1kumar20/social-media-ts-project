@@ -20,8 +20,20 @@ const Home = () => {
       );
     }
   }, []);
+
+  const theme = useAppSelector((state) => state.theme.theme);
+  let themeBoolean: boolean = false;
+  if (theme === "light") {
+    themeBoolean = true;
+  }
   return (
-    <div className="bg-slate-800 text-white min-h-[100vh] flex">
+    <div
+      className={
+        themeBoolean
+          ? "bg-white text-slate-800 min-h-[100vh] flex"
+          : "bg-slate-800 text-white min-h-[100vh] flex"
+      }
+    >
       <LeftSideBar />
       <Outlet />
       <RightSideBar />

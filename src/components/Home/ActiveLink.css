@@ -5,3 +5,10 @@
   color: rgb(30 41 59);
   background-color: white;
 }
+.activeClassDark {
+  color: rgb(30 41 59);
+}
+.activeClassDark.active {
+  background-color: rgb(30 41 59);
+  color: white;
+}

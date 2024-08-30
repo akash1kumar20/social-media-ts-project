@@ -7,7 +7,7 @@ import { RiArrowRightCircleFill } from "react-icons/ri";
 import { NavLink, useNavigate } from "react-router-dom";
 import "./ActiveLink.css";
 import { AuthenticationSliceAction } from "../../store/authenticationSlice";
-import { useAppDispatch } from "../../store";
+import { useAppDispatch, useAppSelector } from "../../store";
 import { PopupAction } from "../../store/popupSlice";
 
 const LeftSideBar = () => {
@@ -25,35 +25,91 @@ const LeftSideBar = () => {
       navigate("/");
     }, 1500);
   };
+
+  const theme = useAppSelector((state) => state.theme.theme);
+  let themeBoolean: boolean = false;
+
+  if (theme === "light") {
+    themeBoolean = true;
+  }
   return (
     <div className="w-[20%] pt-4">
       <h3 className="text-xl font-semibold text-center mb-1">PhotoMania</h3>
       <div className="pt-1 ">
-        <NavLink to="/home/posts" className="activeClass leftSideBar">
+        <NavLink
+          to="/home/posts"
+          className={
+            themeBoolean
+              ? "activeClassDark leftSideBar"
+              : "activeClass leftSideBar"
+          }
+        >
           <FaHome />
           Home
         </NavLink>
-        <NavLink to="/home/createPost" className="activeClass leftSideBar">
+        <NavLink
+          to="/home/createPost"
+          className={
+            themeBoolean
+              ? "activeClassDark leftSideBar"
+              : "activeClass leftSideBar"
+          }
+        >
           <FiPlusCircle />
           Add Photo
         </NavLink>
-        <NavLink to="/home/myPosts" className="activeClass leftSideBar">
+        <NavLink
+          to="/home/myPosts"
+          className={
+            themeBoolean
+              ? "activeClassDark leftSideBar"
+              : "activeClass leftSideBar"
+          }
+        >
           <IoMdPhotos />
           My Photos
         </NavLink>
-        <NavLink to="/home/profile" className="activeClass leftSideBar">
+        <NavLink
+          to="/home/profile"
+          className={
+            themeBoolean
+              ? "activeClassDark leftSideBar"
+              : "activeClass leftSideBar"
+          }
+        >
           <FaUserCircle />
           Profile
         </NavLink>
-        <NavLink to="/" className="activeClass leftSideBar">
+        <NavLink
+          to="/"
+          className={
+            themeBoolean
+              ? "activeClassDark leftSideBar"
+              : "activeClass leftSideBar"
+          }
+        >
           <FaRegBell />
           Notification
         </NavLink>
-        <NavLink to="/" className="activeClass leftSideBar">
+        <NavLink
+          to="/"
+          className={
+            themeBoolean
+              ? "activeClassDark leftSideBar"
+              : "activeClass leftSideBar"
+          }
+        >
           <RiArrowRightCircleFill />
           Direct
         </NavLink>
-        <NavLink to="/" className="activeClass leftSideBar">
+        <NavLink
+          to="/home/setting"
+          className={
+            themeBoolean
+              ? "activeClassDark leftSideBar"
+              : "activeClass leftSideBar"
+          }
+        >
           <IoSettingsOutline />
           Settings
         </NavLink>
