@@ -7,6 +7,6 @@
     @apply text-white w-full md:px-10 px-4 py-2 text-lg flex items-center justify-center gap-x-2 border-b-2 drop-shadow-xl shadow-xl font-semibold;
   }
   .leftSideBar {
-    @apply flex items-center justify-start gap-4 text-xl py-2 ps-4;
+    @apply flex items-center justify-start gap-4 md:text-xl py-2 ps-4;
   }
 }

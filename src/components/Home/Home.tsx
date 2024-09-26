@@ -30,8 +30,8 @@ const Home = () => {
     <div
       className={
         themeBoolean
-          ? "bg-white text-slate-800 min-h-[100vh] flex"
-          : "bg-slate-800 text-white min-h-[100vh] flex"
+          ? "bg-white text-slate-800 min-h-[100vh] flex flex-col md:flex-row"
+          : "bg-slate-800 text-white min-h-[100vh] flex flex-col md:flex-row"
       }
     >
       <LeftSideBar />

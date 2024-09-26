@@ -4,7 +4,10 @@ import { themeSliceAction } from "../../store/themeSlice";
 
 const Setting = () => {
   const dispatch = useAppDispatch();
-  const theme = useAppSelector((state) => state.theme.theme);
+  let theme = useAppSelector((state) => state.theme.theme);
+  if (theme.length === 1) {
+    theme = "Dark";
+  }
   const lightTheme = () => {
     dispatch(themeSliceAction.setLightTheme());
   };

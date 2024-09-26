@@ -33,9 +33,9 @@ const LeftSideBar = () => {
     themeBoolean = true;
   }
   return (
-    <div className="w-[20%] pt-4">
+    <div className="md:w-[20%] pt-4">
       <h3 className="text-xl font-semibold text-center mb-1">PhotoMania</h3>
-      <div className="pt-1 ">
+      <div className="pt-1">
         <NavLink
           to="/home/posts"
           className={
