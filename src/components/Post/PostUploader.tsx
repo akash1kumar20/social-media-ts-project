@@ -26,8 +26,8 @@ const PostUploader = () => {
     }
   };
   const imageSettled = () => {
-    setImage(null);
     if (openFileUploader.current) {
+      setImage(null);
       openFileUploader.current = null;
     }
   };
